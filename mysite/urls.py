@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
+from tesla.views import FrontendAppView
 
 urlpatterns = [
+    path('tesla/', include('tesla.urls')),
     path('admin/', admin.site.urls),
-    path('', include('tesla.urls')),
+    url(r'^', FrontendAppView.as_view()),
 ]

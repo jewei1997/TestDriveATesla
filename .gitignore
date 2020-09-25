@@ -1,5 +1,7 @@
-# python virtual env
+# python
 env/
+.env
+__pycache__/
 
 # dependencies
 /node_modules
@@ -10,7 +12,10 @@ env/
 /coverage
 
 # production
-/build
+static/
+staticfiles/
+.cache/
+build/
 
 # misc
 .DS_Store
